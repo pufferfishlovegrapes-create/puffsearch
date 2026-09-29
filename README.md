@@ -84,33 +84,7 @@ firebase init hosting
 Follow the CLI steps, then deploy.
 
 ---
-
-## If You Fork This Project
-
-Please consider starring the repository.
-
-You must **not**:
-
-* Modify the AGPL license
-* Claim this code as your own
-* Fail to provide proper credit
-* Use this code in your website without attribution
-* Detach from the fork network without giving credit
-* Violate the license in any way
-* Steal the code or redistribute it without acknowledgment
-
-You *may*:
-
-* Deploy it without any modifications
-* Deploy it with modifications (as long as credit and a changelog are included)
-* Perform other allowed actions as defined by the license
-
-To remain compliant, it is recommended that you include a notice like this:
-
----
-
-## FORK NOTICE
-
+credits to the original cherri by x8rr the code is not mine for the original pls go to https://github.com/x8rr/cherri
 This repository was derived from [x8rr/cherri](https://github.com/x8rr/cherri). All original code was written by the project owner (x8rr). The following changes have been made to this fork:
 
 * Change 1
