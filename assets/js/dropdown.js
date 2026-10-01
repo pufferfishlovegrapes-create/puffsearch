@@ -3,9 +3,7 @@ const appSettings = {
   backend: localStorage.getItem("cherri_backend") || "Scramjet",
   searchEngine: localStorage.getItem("cherri_searchEngine") || "DuckDuckGo",
   decoy: localStorage.getItem("decoy") || "None",
-  wisp: localStorage.getItem("cherri_wispUrlSelected") || "rhw",
   theme: localStorage.getItem("cherri_theme") || "default",
-  store: localStorage.getItem("cherri_gameStore") || "Classplay",
 };
 
 const searchEngineSelector = document.querySelector(".search-engine-selector");
@@ -27,10 +25,6 @@ const backendOptions = backendSelector.querySelector(".backend-options");
 const themeSelector = document.querySelector(".theme-selector");
 const themeSelected = themeSelector.querySelector(".theme-selected");
 const themeOptions = themeSelector.querySelector(".theme-options");
-
-const storeSelector = document.querySelector(".store-selector");
-const storeSelected = storeSelector.querySelector(".store-selected");
-const storeOptions = storeSelector.querySelector(".store-options");
 
 const decoyPresets = {
   Google: {
@@ -69,10 +63,6 @@ const decoyPresets = {
     title: "Microsoft 365",
     icon: "https://www.microsoft.com/favicon.ico",
   },
-  Scratch: {
-    title: "Scratch - Imagine, Program, Share",
-    icon: "https://scratch.mit.edu/favicon.ico",
-  },
   Billibilli: {
     title: "Bilibili - Video Sharing Platform",
     icon: "https://www.bilibili.com/favicon.ico",
@@ -87,7 +77,7 @@ const decoyPresets = {
 function closeAllSelectors() {
   document
     .querySelectorAll(
-      ".backend-show, .transport-show, .search-engine-show, .decoy-show, .cloak-link-show, .wisp-show, .theme-show, .store-show"
+      ".backend-show, .transport-show, .search-engine-show, .decoy-show, .cloak-link-show, .wisp-show, .theme-show"
     )
     .forEach((el) =>
       el.classList.remove(
@@ -97,13 +87,12 @@ function closeAllSelectors() {
         "decoy-show",
         "cloak-link-show",
         "wisp-show",
-        "theme-show",
-        "store-show"
+        "theme-show"
       )
     );
   document
     .querySelectorAll(
-      ".backend-arrow-active, .transport-arrow-active, .search-engine-arrow-active, .decoy-arrow-active, .cloak-link-arrow-active, .wisp-arrow-active, .theme-arrow-active, .store-arrow-active"
+      ".backend-arrow-active, .transport-arrow-active, .search-engine-arrow-active, .decoy-arrow-active, .cloak-link-arrow-active, .wisp-arrow-active, .theme-arrow-active"
     )
     .forEach((el) =>
       el.classList.remove(
@@ -113,15 +102,11 @@ function closeAllSelectors() {
         "decoy-arrow-active",
         "cloak-link-arrow-active",
         "wisp-arrow-active",
-        "theme-arrow-active",
-        "store-show"
+        "theme-arrow-active"
       )
     );
 }
 
-const defaultWispUrl = `${
-  window.location.protocol === "https:" ? "wss" : "ws"
-}://${window.location.host}/w/`;
 const allBackendOptions = ["Ultraviolet", "Scramjet"];
 const allTransportOptions = ["Epoxy", "Libcurl"];
 const allSearchEngineOptions = [
@@ -143,17 +128,7 @@ const allDecoyOptions = [
   "Google Classroom",
   "Delta Math",
   "Microsoft",
-  "Scratch",
   "Billibilli",
-];
-
-const wispPresets = {
-  rhw: { url: "wss://wisp.rhw.one/" },
-  
-};
-
-const allWispOptions = [
-  "rhw",
 ];
 
 const allThemeOptions = [
@@ -174,8 +149,6 @@ const allThemeOptions = [
   "sea",
   "violet",
 ];
-
-const allStoreOptions = ["Classplay", "GN-Math"];
 
 function createSelector(
   selectorType,
@@ -302,17 +275,6 @@ createSelector(
   "Successfully updated theme! Refresh to see background change."
 );
 
-createSelector(
-  "store",
-  storeSelected,
-  storeOptions,
-  allStoreOptions,
-  appSettings.store,
-  "cherri_gameStore",
-  "storeUpdated",
-  "Successfully updated game library!"
-);
-
 document.addEventListener("decoyUpdated", (e) => applyDecoy(e.detail));
 document.addEventListener("themeUpdated", (e) => {
   const link = document.getElementById("css-theme-link");
@@ -323,12 +285,6 @@ document.addEventListener("themeUpdated", (e) => {
   } else {
     link.href = "/assets/css/colors.css";
   }
-});
-document.addEventListener("wispUpdated", (e) => {
-  const wisp = wispPresets[e.detail];
-
-  localStorage.setItem("cherri_wispUrl", wisp.url);
-  console.log(wisp.url);
 });
 window.addEventListener("load", () => {
   applyDecoy(localStorage.getItem("decoy"));

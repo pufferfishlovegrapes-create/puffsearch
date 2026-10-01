@@ -378,9 +378,7 @@ p a:hover {
 }
 
 .apps-wrapper.settings-hidden,
-.games-wrapper.settings-hidden,
-.partners-wrapper.settings-hidden,
-.download-wrapper.settings-hidden {
+.partners-wrapper.settings-hidden {
     transform: translate(-50%, -50%) scale(.9);
     opacity: 0;
     pointer-events: none;
@@ -388,9 +386,7 @@ p a:hover {
 }
 
 .apps-wrapper.settings-shown,
-.games-wrapper.settings-shown,
-.partners-wrapper.settings-shown,
-.download-wrapper.settings-shown {
+.partners-wrapper.settings-shown {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
     pointer-events: all;
@@ -569,8 +565,7 @@ p a:hover {
     background: var(--bg-3);
 }
 
-.apps-wrapper,
-.games-wrapper {
+.apps-wrapper {
     position: fixed;
     height: 70vh;
     width: 1000px;
@@ -608,38 +603,16 @@ p a:hover {
     transform-origin: center center;
 }
 
-.download-wrapper {
-    position: fixed;
-    height: 27vh;
-    width: 500px;
-    padding: 15px;
-    backdrop-filter: blur(10px);
-    background: color-mix(in srgb, var(--bg) 30%, transparent 70%);
-    border: 2px solid transparent;
-    box-shadow: 0 0 0 .5px rgba(255, 255, 255, 0.15),
-        0 16px 32px rgba(0, 0, 0, 0.12);
-    border-radius: 25px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    z-index: 6;
-    opacity: 1;
-    transition: 0.2s;
-    transform-origin: center center;
-}
-
 .partner-container {
     height: 43vh;
     overflow-y: auto;
 }
 
-.apps-container,
-.games-container {
+.apps-container {
     width: 975px;
 }
 
-.apps-container::-webkit-scrollbar,
-.games-container::-webkit-scrollbar {
+.apps-container::-webkit-scrollbar {
     scrollbar-width: thin;
 }
 

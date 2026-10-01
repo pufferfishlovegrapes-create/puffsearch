@@ -1,0 +1,12 @@
+{
+  "name": "puffsearch",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "@mercuryworkshop/wisp-js": "^0.5.0",
+    "express": "^5.1.0"
+  }
+}

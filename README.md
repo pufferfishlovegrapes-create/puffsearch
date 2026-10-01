@@ -5,23 +5,21 @@
 </p>
 
 <p align="center">
-  A UBG project built to be clean, simple, and easy to use. With over 700 games sourced from two different stores, 40 apps, a fast and powerful browser, extensive customization options, and much more, this is easily one of the best unblocked websites.
+  A clean, customizable web hub with apps, a fast browser, extensive customization options, and more.
 </p>
  
 <hr>
 
 ## Roadmap
 
-* [x] Games
 * [x] Apps
 * [x] Proxy
 * [x] Movies
 * [x] Chatroom
-* [x] Game overlay
 
 ## Deployment
 
-Cherri is deployable to remotely any hosting service, and even locally deployable.
+The static site can be hosted on many providers. The Scramjet proxy also needs a long-running Node.js host that supports WebSocket upgrades and serves the site over HTTPS.
 
 Follow the steps below to deploy.
 
@@ -41,8 +39,7 @@ Follow the steps below to deploy.
 [![Deploy to Cyclic](https://binbashbanana.github.io/deploy-buttons/buttons/remade/cyclic.svg)](https://app.cyclic.sh/api/app/deploy/x8rr/cherri)
 
 > [!IMPORTANT]
-> To deploy on Cloudflare Pages, use [this repository.](https://github.com/x8rr/cherri-cloudflare)
-> This version excludes Classplay store files due to Cloudflare’s 25 MB limit.
+> For Cloudflare Pages, use [this repository.](https://github.com/x8rr/cherri-cloudflare)
 
 ### Method 2: Deploying Locally
 
@@ -58,12 +55,14 @@ Enter the directory:
 cd cherri
 ```
 
-Run a local development server:
+Install dependencies and run the site with its same-origin Wisp endpoint:
 
 ```sh
-python3 -m http.server        # simple Python HTTP server
-netlify dev                   # emulate a Netlify production environment
+npm install
+npm start
 ```
+
+The server listens on port 8000 by default. For production, forward HTTPS WebSocket upgrades for `/wisp/` to this Node server; static-only hosting can serve the UI but cannot run the Wisp relay.
 
 ### Method 3: Deploying to Firebase
 

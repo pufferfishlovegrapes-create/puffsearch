@@ -39,9 +39,9 @@
     </script>
     <meta name="title" content="Cherri">
     <meta name="description"
-        content="A state of the art unblocked games website. Clean, customizable, and now in pink!">
+        content="A clean, customizable web hub with apps, a fast browser, and more.">
     <meta name="keywords"
-        content="unblocked, ub, school, games, gn-math, gnmath, unblockedgames, proxy, ultraviolet, scramjet, roblox, fortnite, nowgg, movies, tv, browser, webos, ubgames, apps, discord, freemovies, vm">
+        content="unblocked, ub, school, proxy, ultraviolet, scramjet, movies, tv, browser, webos, apps, discord, freemovies, vm">
     <meta name="robots" content="index, nofollow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta property="og:image" content="https://cherri.x8r.dev/assets/img/cover.png">
@@ -73,11 +73,6 @@
                 </a>
             </li>
             <li class="divider"></li>
-            <li>
-                <a onclick="toggleGames()" href="#" data-page="games">
-                    <i class="ri-gamepad-line"></i>
-                </a>
-            </li>
             <li>
                 <a onclick="toggleApps()" href="#" data-page="apps">
                     <i class="ri-apps-line"></i>
@@ -174,10 +169,6 @@
                     <i class="far fa-cog"></i>
                     General
                 </div>
-                <div class="settings-section" onclick="switchSettingsPage('gaming')" data-target="gaming">
-                    <i class="far fa-gamepad-modern"></i>
-                    Gaming
-                </div>
                 <div class="settings-section" onclick="switchSettingsPage('cloaking')" data-target="cloaks">
                     <i class="far fa-hood-cloak"></i>
                     Cloaking
@@ -272,57 +263,6 @@
                     </label>
                     <br>
                     <br>
-                </div>
-
-                <div id="settings-gaming" class="settings-page">
-                    <h2>Game Library</h2>
-                    <p>The set of games that the whole site uses! This will automatically reload the games.</p>
-                    <div class="store-selector">
-                        <div class="store-selected"></div>
-                        <div class="store-options">
-
-                        </div>
-                    </div>
-
-                    <h2>Game Overlay</h2>
-                    <p>Enable or disable the game overlay, which provides useful tools while gaming such as a browser,
-                        recording tools, etc. Turn off if you're experiencing performance issues.</p>
-                    <!-- From Uiverse.io by Galahhad -->
-                    <label class="switch">
-                        <input id="overlay-toggle" checked="" onchange="updateOverlaySettings()" type="checkbox">
-                        <div class="slider">
-                            <div class="circle">
-                                <svg class="cross" xml:space="preserve" style="enable-background:new 0 0 512 512"
-                                    viewBox="0 0 365.696 365.696" y="0" x="0" height="6" width="6"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path data-original="#000000" fill="currentColor"
-                                            d="M243.188 182.86 356.32 69.726c12.5-12.5 12.5-32.766 0-45.247L341.238 9.398c-12.504-12.503-32.77-12.503-45.25 0L182.86 122.528 69.727 9.374c-12.5-12.5-32.766-12.5-45.247 0L9.375 24.457c-12.5 12.504-12.5 32.77 0 45.25l113.152 113.152L9.398 295.99c-12.503 12.503-12.503 32.769 0 45.25L24.48 356.32c12.5 12.5 32.766 12.5 45.247 0l113.132-113.132L295.99 356.32c12.503 12.5 32.769 12.5 45.25 0l15.081-15.082c12.5-12.504 12.5-32.77 0-45.25zm0 0">
-                                        </path>
-                                    </g>
-                                </svg>
-                                <svg class="checkmark" xml:space="preserve" style="enable-background:new 0 0 512 512"
-                                    viewBox="0 0 24 24" y="0" x="0" height="10" width="10"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path class="" data-original="#000000" fill="currentColor"
-                                            d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z">
-                                        </path>
-                                    </g>
-                                </svg>
-                            </div>
-                        </div>
-                    </label>
-
-                    <br><br>
-
-                    <h2>Download Games</h2>
-                    <p>Download all game stores.</p>
-                    <button class="button" style="margin-left: 0;" onclick="toggleDownloadGames()">Download</button>
-
-                    <br><br><br>
                 </div>
 
                 <div id="settings-cloaking" class="settings-page">
@@ -539,35 +479,6 @@
         <br>
     </div>
 
-    <div class="download-wrapper settings-hidden">
-        <div style="text-align: center;">
-            <br>
-            <h1 style="font-size: 23px; margin-bottom: 10px;">Download Games</h1>
-        </div>
-        <div style="text-align: center;">
-            <a href="https://drive.google.com/file/d/1jenQFXTxrgbNqfLYzH7ckVEC_hskECl1/view?usp=sharing"
-                target="_blank">
-                <button class="button">Google Drive 1</button>
-            </a>
-        </div>
-        <br>
-        <p style="opacity: .5; font-size: 14px; font-style: italic; text-align: center; ">more coming before gta 6 twin
-            <br> :broken-heart: :wilted-rose: :low-battery:
-        </p>
-    </div>
-
-    <div class="games-wrapper settings-hidden">
-        <input onkeyup="searchApps(this.value)" type="text" style="font-family: Arial;"
-            placeholder="search through the games..." id="apps-search"
-            class="h-fit p-4 px-5 w-[975px] bg-[var(--bg-2)] border-none absolute left-1/2 translate-x-[-50%] rounded-2xl transition-all focus:bg-[var(--bg-3)] focus:outline-none ">
-        <br><br><br>
-        <div
-            class="games-container h-[83%] overflow-y-scroll w-[475px] flex flex-wrap w-7/8 absolute left-1/2 translate-x-[-50%] justify-center">
-            <br>
-        </div>
-        <br>
-    </div>
-
     <div class="partners-wrapper settings-hidden">
         <br>
         <h1 style="text-align: center; font-size: 35px; color: var(--bright-text); font-weight: 500;">Partners</h1>
@@ -608,8 +519,6 @@
         }
     </script>
     <script>
-        const selectedStore = localStorage.getItem("cherri_gameStore") ?? "Classplay"
-
         let res
         let data
 
@@ -665,17 +574,8 @@
         }
 
         load("apps", "apps", "Apps", "rSearch", "")
-        load(selectedStore.toLowerCase(), "games", "Games", "navTo", "play.html?launch=")
 
         document.addEventListener("DOMContentLoaded", observe)
-
-        document.addEventListener("storeUpdated", (e) => {
-            const newStore = e.detail.toLowerCase()
-            const container = document.querySelector(".games-container")
-
-            container.innerHTML = ''
-            load(newStore, "games", "Games", "navTo", "play.html?launch=")
-        })
 
         function searchApps(term) {
             const apps = document.querySelectorAll(".app")
@@ -761,16 +661,9 @@
                 if (!document.body.contains(contentFrame)) {
                     document.body.appendChild(contentFrame);
                 }
-                const overlayOn = localStorage.getItem("cherri_useOverlay") ?? "yes"
-                if (overlayOn === "yes" && l.includes("/stores/")) {
-                    document.querySelector("nav").style.opacity = 0
-                    setTimeout(() => {
-                        document.querySelector("nav").style.display = "none"
-                    }, 350)
-                }
                 homeContent.style.display = "none";
                 contentFrame.style.display = "block";
-                contentFrame.src = l.includes("/stores/") ? `/pages/${l}` : `/pages/${l}.html`;
+                contentFrame.src = `/pages/${l}.html`;
             }
         }
     </script>
@@ -799,8 +692,6 @@
         const settingsViewframe = document.querySelector(".settings-content-container")
 
         const appsHolder = document.querySelector(".apps-wrapper")
-        const gamesHolder = document.querySelector(".games-wrapper")
-        const downloadHolder = document.querySelector(".download-wrapper")
         const partnerHolder = document.querySelector(".partners-wrapper")
 
         const general = document.querySelector("#settings-general")
@@ -832,12 +723,8 @@
             if (settingsHolder.classList.contains("settings-hidden")) {
                 if (appsHolder.classList.contains("settings-shown")) {
                     toggleApps()
-                } else if (gamesHolder.classList.contains("settings-shown")) {
-                    toggleGames()
                 } else if (partnerHolder.classList.contains("settings-shown")) {
                     togglePartners()
-                } else if (downloadHolder.classList.contains("settings-shown")) {
-                    toggleDownloadGames()
                 }
                 const newBlurOverlay = document.createElement("div")
                 newBlurOverlay.classList.add("blurOverlay")
@@ -858,12 +745,8 @@
             if (appsHolder.classList.contains("settings-hidden")) {
                 if (settingsHolder.classList.contains("settings-shown")) {
                     toggleSettings()
-                } else if (gamesHolder.classList.contains("settings-shown")) {
-                    toggleGames()
                 } else if (partnerHolder.classList.contains("settings-shown")) {
                     togglePartners()
-                } else if (downloadHolder.classList.contains("settings-shown")) {
-                    toggleDownloadGames()
                 }
                 const newBlurOverlay = document.createElement("div")
                 newBlurOverlay.classList.add("blurOverlay")
@@ -882,72 +765,12 @@
             }
         }
 
-        function toggleDownloadGames() {
-            if (downloadHolder.classList.contains("settings-hidden")) {
-                if (appsHolder.classList.contains("settings-shown")) {
-                    toggleApps()
-                } else if (gamesHolder.classList.contains("settings-shown")) {
-                    toggleGames()
-                } else if (partnerHolder.classList.contains("settings-shown")) {
-                    togglePartners()
-                } else if (settingsHolder.classList.contains("settings-shown")) {
-                    toggleSettings()
-                }
-                const newBlurOverlay = document.createElement("div")
-                newBlurOverlay.classList.add("blurOverlay")
-                document.body.appendChild(newBlurOverlay)
-                newBlurOverlay.addEventListener("click", () => {
-                    toggleDownloadGames()
-                })
-                downloadHolder.classList.remove("settings-hidden")
-                downloadHolder.classList.add("settings-shown")
-                console.log("Apps toggled.")
-            } else {
-                downloadHolder.classList.remove("settings-shown")
-                downloadHolder.classList.add("settings-hidden")
-                const newBlurOverlay = document.querySelector(".blurOverlay")
-                newBlurOverlay.remove()
-            }
-        }
-
-        function toggleGames() {
-            if (gamesHolder.classList.contains("settings-hidden")) {
-                if (appsHolder.classList.contains("settings-shown")) {
-                    toggleApps()
-                } else if (settingsHolder.classList.contains("settings-shown")) {
-                    toggleSettings()
-                } else if (partnerHolder.classList.contains("settings-shown")) {
-                    togglePartners()
-                } else if (downloadHolder.classList.contains("settings-shown")) {
-                    toggleDownloadGames()
-                }
-                const newBlurOverlay = document.createElement("div")
-                newBlurOverlay.classList.add("blurOverlay")
-                document.body.appendChild(newBlurOverlay)
-                newBlurOverlay.addEventListener("click", () => {
-                    console.log("clicked")
-                    toggleGames()
-                })
-                gamesHolder.classList.remove("settings-hidden")
-                gamesHolder.classList.add("settings-shown")
-            } else {
-                gamesHolder.classList.remove("settings-shown")
-                gamesHolder.classList.add("settings-hidden")
-                const newBlurOverlay = document.querySelector(".blurOverlay")
-                newBlurOverlay.remove()
-            }
-        }
-
         function togglePartners() {
             if (partnerHolder.classList.contains("settings-hidden")) {
                 if (appsHolder.classList.contains("settings-shown")) {
                     toggleApps()
                 } else if (settingsHolder.classList.contains("settings-shown")) {
                     toggleSettings()
-                } else if (gamesHolder.classList.contains("settings-shown")) {
-                    toggleGames()
-                } else if (downloadHolder.classList.contains("settings-shown")) {
-                    toggleDownloadGames()
                 }
                 const newBlurOverlay = document.createElement("div")
                 newBlurOverlay.classList.add("blurOverlay")
@@ -1054,28 +877,6 @@
             pjstoggle.checked = true
         } else {
             pjstoggle.checked = false
-        }
-    </script>
-    <script defer>
-        const overlayToggle = document.getElementById("overlay-toggle")
-        const overlayIsOn = localStorage.getItem("cherri_useOverlay") ?? "yes"
-
-        function updateOverlaySettings() {
-            if (overlayToggle.checked) {
-                console.log("checked")
-                showToast("success", "Game overlay is now on!", "fas fa-check-circle")
-                localStorage.setItem("cherri_useOverlay", "yes")
-            } else {
-                console.log("unchecked")
-                localStorage.setItem("cherri_useOverlay", "no")
-                showToast("success", "Game overlay is now off!", "fas fa-check-circle")
-            }
-        }
-
-        if (overlayIsOn === "yes") {
-            overlayToggle.checked = true
-        } else {
-            overlayToggle.checked = false
         }
     </script>
     <script defer>

@@ -329,7 +329,9 @@
         const params = new URLSearchParams(window.location.search)
         
         async function waitThenSearch() {
-            await connection.setTransport("/libcurl/index.mjs", [{ websocket: localStorage.getItem("cherri_wispUrl") ?? "wss://wisp.rhw.one/" }])
+            const defaultWispUrl = `${location.protocol === "https:" ? "wss:" : "ws:"}//${location.host}/wisp/`
+            const wispUrl = localStorage.getItem("cherri_wispUrl") || defaultWispUrl
+            await connection.setTransport("/libcurl/index.mjs", [{ websocket: wispUrl }])
 
             rSearch(params.get("launch"))
         }

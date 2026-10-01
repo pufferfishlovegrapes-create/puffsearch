@@ -2,7 +2,8 @@ const sections = document.querySelectorAll(".settings-section");
 const buttons = document.querySelectorAll(".settings-side button");
 const wispServers = document.querySelectorAll(".wisp-servers button")
 const currentWisp = document.getElementById("currentWisp");
-const savedWisp = localStorage.getItem("cherri_wispUrl") ?? "wss://wisp.rhw.one/";
+const defaultWisp = `${window.location.protocol === "https:" ? "wss:" : "ws:"}//${window.location.host}/wisp/`;
+const savedWisp = localStorage.getItem("cherri_wispUrl") ?? defaultWisp;
 const savedCloak = localStorage.getItem("cherri_cloak") ?? "";
 const savedCloakIcon = localStorage.getItem("cherri_cloakIcon") ?? "";
 const savedCloakTitle = localStorage.getItem("cherri_cloakTitle") ?? "";

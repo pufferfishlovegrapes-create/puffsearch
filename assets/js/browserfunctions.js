@@ -2,8 +2,15 @@ let aTab = 0;
 let tabCounter = 1;
 let bTabs = [];
 const connection = new BareMux.BareMuxConnection("/baremux/worker.js");
-const wispUrl = localStorage.getItem("cherri_wispUrl") || "wss://wisp.rhw.one/";
-const bareUrl = "https://useclassplay.vercel.app/fq/";
+const defaultWispUrl = `${location.protocol === "https:" ? "wss:" : "ws:"}//${location.host}/wisp/`;
+const savedWispUrl = localStorage.getItem("cherri_wispUrl");
+const wispUrl = !savedWispUrl || savedWispUrl === "wss://wisp.rhw.one/"
+  ? defaultWispUrl
+  : savedWispUrl;
+
+if (wispUrl !== savedWispUrl) {
+  localStorage.setItem("cherri_wispUrl", wispUrl);
+}
 
 let searchE;
 const se = localStorage.getItem("cherri_searchEngine") || "DuckDuckGo";
