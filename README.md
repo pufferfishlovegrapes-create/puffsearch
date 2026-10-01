@@ -83,7 +83,8 @@ firebase init hosting
 Follow the CLI steps, then deploy.
 
 ---
-credits to the original cherri by x8rr the code is not mine for the original pls go to https://github.com/x8rr/cherri
+credits to the original cherri by x8rr. The code is not mine for the original pls go to https://github.com/x8rr/cherri
+this is a remixed version of cherri with out the games-added backend 
 This repository was derived from [x8rr/cherri](https://github.com/x8rr/cherri). All original code was written by the project owner (x8rr). The following changes have been made to this fork:
 
 * Change 1
