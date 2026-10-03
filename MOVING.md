@@ -1,15 +1,5 @@
-# breeze is being rebuilt
-if you haven't heard, i'm rebranding breeze as cherri, and rebuilding it, changing up the colors, font, design, and more! the new stuff is found below, so save these as bookmarks if your breeze ones don't work.
+# Puff Search
 
-### links (not all deployed yet)
-github- https://github.com/x8rr/cherri
+Puff Search is the current app and repository. Older deployment links are no longer maintained.
 
-netlify- https://usecherri.netlify.app/
-
-vercel- https://usecherri.vercel.app/
-
-main- https://cherri.onl/
-
-x8r link- https://cherri.x8r.dev/
-
-cloudflare- https://usecherri.pages.dev/
+For local development, run `npm install` followed by `npm start`.

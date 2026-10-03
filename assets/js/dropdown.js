@@ -221,8 +221,8 @@ function applyDecoy(s) {
         s +
         " was selected"
     );
-    document.title = "cherri";
-    favicon.href = "/assets/img/fav.png";
+    document.title = "Puff Search";
+    favicon.href = "/assets/img/puffsearch-logo.png";
     return;
   } else {
     document.title = selected.title;

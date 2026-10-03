@@ -121,8 +121,8 @@ function cloakMe(o) {
             localStorage.setItem("cherri_cloakTitle", document.title);
             break;
         case "none":
-            tabIcon.href = "/assets/img/fav.png";
-            document.title = "cherri";
+            tabIcon.href = "/assets/img/puffsearch-logo.png";
+            document.title = "Puff Search";
             localStorage.setItem("cherri_cloakIcon", tabIcon.href);
             localStorage.setItem("cherri_cloakTitle", document.title);
             break;

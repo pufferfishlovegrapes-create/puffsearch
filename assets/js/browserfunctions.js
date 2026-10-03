@@ -64,7 +64,7 @@ function newTab() {
   tabElement.classList.add("tab", "hcontainer");
   tabElement.dataset.tabId = nTab.id;
   tabElement.innerHTML = `
-        <img src="/assets/img/fav.png" id="fav" data-fav-id="${nTab.id}" width="24" alt="">
+        <img src="/assets/img/puffsearch-logo.png" id="fav" data-fav-id="${nTab.id}" width="24" alt="">
             <span>
                 New Tab
             </span>

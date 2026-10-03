@@ -47,7 +47,7 @@
     pointer-events: none;
 }
 
-.cherri-info {
+.puffsearch-info {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -65,7 +65,7 @@
     transition: 0.2s;
 }
 
-.cherri-info .divider {
+.puffsearch-info .divider {
     display: inline-block;
     background: color-mix(in srgb, var(--bg-2) 60%, transparent 40%);
     width: 2px;

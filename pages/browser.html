@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cherri | browser</title>
-    <link rel="shortcut icon" href="/assets/img/fav.png" type="image/x-icon" id="tabIcon">
+    <title>Puff Search | Browser</title>
+    <link rel="shortcut icon" href="/assets/img/puffsearch-logo.png" type="image/png" id="tabIcon">
     <link rel="stylesheet" href="/assets/css/colors.css" id="css-theme-link">
     <link rel="stylesheet" href="/assets/css/elements.css">
     <link rel="stylesheet" href="/assets/css/font.css">
@@ -19,7 +19,7 @@
         async function swium() {
             await navigator.serviceWorker.register("/sw.js").then(() => {
                 console.log(
-                    "%ccherri" + "%c SJ sw registered!",
+                    "%cPuff Search" + "%c SJ sw registered!",
                     "color: white; background: linear-gradient(to bottom right, #e2588d, #dbd7d7); border-radius: 5px; font-weight: bold; padding: 6px; font-family: monospace;",
                     "color: white; background: transparent; border-radius: 0px; padding: 0px;"
                 );
@@ -37,7 +37,7 @@
 
 <body>
     <div class="nav-logo">
-        <img src="/assets/img/fav.png" alt="" onclick="
+                        <img src="/assets/img/puffsearch-logo.png" alt="" onclick="
             ul.classList.add('active');
             const blurr = document.createElement('div')
             blurr.classList.add('bluroverlay')
