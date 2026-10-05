@@ -5,8 +5,8 @@ import { fileURLToPath } from "node:url";
 import { server as wisp } from "@mercuryworkshop/wisp-js/server";
 
 const siteRoot = path.dirname(fileURLToPath(import.meta.url));
-const port = Number(process.env.PORT || 8000);
-const host = process.env.HOST || "0.0.0.0";
+const port = Number(process.env.SERVER_PORT || process.env.PORT || 8000);
+const host = "0.0.0.0";
 
 wisp.options.port_whitelist = [80, 443];
 wisp.options.stream_limit_per_host = -1;
