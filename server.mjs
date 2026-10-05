@@ -35,21 +35,16 @@ const server = createServer(app);
 
 server.on("upgrade", (request, socket, head) => {
   let url;
-  let origin;
+
   try {
     url = new URL(request.url || "/", "http://localhost");
-    origin = new URL(request.headers.origin || "");
   } catch {
     socket.end("HTTP/1.1 403 Forbidden\r\nConnection: close\r\n\r\n");
     return;
   }
 
-  if (
-    url.pathname !== "/wisp/" ||
-    !["http:", "https:"].includes(origin.protocol) ||
-    origin.host.toLowerCase() !== (request.headers.host || "").toLowerCase()
-  ) {
-    socket.end("HTTP/1.1 403 Forbidden\r\nConnection: close\r\n\r\n");
+  if (url.pathname !== "/wisp/") {
+    socket.end("HTTP/1.1 404 Not Found\r\nConnection: close\r\n\r\n");
     return;
   }
 
