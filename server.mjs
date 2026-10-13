@@ -10,7 +10,7 @@ const host = process.env.HOST || "0.0.0.0";
 
 wisp.options.port_whitelist = [80, 443];
 wisp.options.stream_limit_per_host = -1;
-wisp.options.stream_limit_total = 48;
+wisp.options.stream_limit_total = 100;
 wisp.options.allow_udp_streams = false;
 wisp.options.allow_direct_ip = false;
 wisp.options.allow_private_ips = false;
